@@ -1,4 +1,3 @@
-//require('./models/db');
 var createError = require('http-errors');
 const mongoose = require('mongoose');
 var express = require('express');
@@ -26,19 +25,17 @@ var app = express();
 //passport config
 require('./config/passport')(passport);
 
+console.log(dotenv.parsed);
+
 const db = process.env.MONGODB_URI;
 
-mongoose.connect(db,{
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-    useFindAndModify: false
-}, (err)=>{
-    if(!err){
-        console.log('MongoDB Connection Succeeded');
-    }else{
-        console.log('Error connecting to Database: ' + err)
-    }
-});
+mongoose
+  .connect(
+    db,
+    { useNewUrlParser: true ,useUnifiedTopology: true, useFindAndModify: false}
+  )
+  .then(() => console.log('MongoDB Connected'))
+  .catch(err => console.log(err));
 
 require('./models/productModel');
 require('./models/userModel');
