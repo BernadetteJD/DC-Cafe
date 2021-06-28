@@ -1,0 +1,19 @@
+extend ../layout.pug   
+
+
+block content
+  div.container.text-center
+    h1 Menu
+    p This displays product menu information
+    each productRow in products
+      div.row
+      each item in productRow
+        div.col-sm-6.col-md-4
+          div.thumbnail
+            img.img-responsive(src="/uploads/images/" + item.image)
+            .caption
+            h4= item.name
+            p= "Price :" + " " + item.price
+            p=item.description
+            a.btn.btn-info(href= '/admin/update/' + item._id) Edit 
+            a.btn.btn-info(href= '/admin/delete/' + item._id onclick="return confirm('Are you sure to delete this record ?'); ") Delete 

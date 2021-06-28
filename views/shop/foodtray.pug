@@ -1,0 +1,38 @@
+extend ../layoutUser.pug
+
+block content
+    if products
+        div.row
+            div.col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
+                ul.list-group
+                each item in products
+                    li.list-group-item
+                        span.badge=`QTY ${item.qty}`
+                        strong=` ${item.item.name} `
+                        span.label.label-success=`$ ${item.price} `
+                        div.btn-group
+                            button.btn.btn-primary.btn-xs.dropdown-toggle(type='button' data-toggle='dropdown')
+                                | Action
+                                span.caret
+                            ul.dropdown-menu
+                                li
+                                a(href='/reduce/' + item._id) Reduce by 1
+                                li
+                                a(href='/reduce/' + item._id) Remove
+            div.col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
+                strong=`Total Price ${totalPrice}`
+        hr 
+        div.row
+            div.col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
+                form(action='/shop/payment' method='POST')
+                    script.stripe-button(src='//checkout.stripe.com/v2/checkout.js', 
+                    data-key=key, 
+                    data-amount=totalPrice * 100, 
+                    data-currency='usd', 
+                    data-name=name, 
+                    data-description=description, 
+                    data-locale='auto')
+    else
+        div.row
+            div.col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
+                h2 No Items in tray

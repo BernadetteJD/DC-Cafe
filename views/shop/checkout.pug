@@ -1,0 +1,39 @@
+extend ../layoutUser.pug
+
+block content
+    div.row
+        div.col-sm-6.col-md-4.col-md-offset-4.col-sm-offset-3
+            h1 Checkout
+            h4=`Your Total: ${total}`
+            form#checkout-form(action="/" method="POST")
+                div.row
+                    div.col-xs-12
+                        div.form-group
+                            label Address
+                            input.form-control(type="text" id="address")
+                    div.col-xs-12
+                        div.form-group
+                            label Name
+                            input.form-control(type="text" id="name")
+                    div.col-xs-12
+                        div.form-group
+                            label Card Holder Name
+                            input.form-control(type="text" id="card-name")
+                    div.col-xs-12
+                        div.form-group
+                            label Credit Card Number
+                            input.form-control(type="text" id="card-number")
+                    div.col-xs-12
+                        div.form-group
+                            label Expiration Month
+                            input.form-control(type="text" id="card-expiry-month")
+                    div.col-xs-12
+                        div.form-group
+                            label Expiration Year
+                            input.form-control(type="text" id="card-expiry-year")
+                    div.col-xs-12
+                        div.form-group
+                            label CVC
+                            input.form-control(type="text" id="card-cvc")
+                    button.btn.btn-success(type="submit") Order Now
+                    

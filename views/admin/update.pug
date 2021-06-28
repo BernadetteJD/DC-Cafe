@@ -1,0 +1,21 @@
+extend ../layout.pug
+
+block content
+  div.container
+        div.row
+            form(action='/admin/update' method='POST')
+                fieldset
+                    legend Update Product
+                        input(type="hidden", name="_id" value=product._id)
+                        div.form-group
+                            label Product Name
+                            input(type="text" class="form-control" name="name" placeholder="Product Name" required value=product.name)
+                        div.form-group
+                            label Product Price
+                            input(type="number" class="form-control" name="price" required value=product.price)
+                        div.form-group
+                            label Product Description
+                            textarea(name="description" class="form-control" placeholder="Product Description" )=product.description
+                        div.form-group
+                            button.btn.btn-primary.btn-lg(type="submit") Update Product  
+

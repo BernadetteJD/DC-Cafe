@@ -1,0 +1,16 @@
+extend ../layoutUser.pug
+
+block content
+    div.container.text-center
+        h1 Menu
+        each productRow in products
+            div.row
+            each item in productRow
+                div.col-sm-6.col-md-4
+                    div.thumbnail
+                        img.img-responsive(src="/uploads/images/" + item.image)
+                        .caption
+                        h4= item.name
+                        p= "Price :" + " " + item.price
+                        p=item.description
+                        a.btn.btn-info(href="/shop/add-to-tray/" + item._id) Add to tray    

@@ -1,0 +1,48 @@
+.carousel-inner img {
+  /*-webkit-filter: grayscale(90%);
+  filter: grayscale(90%); /* make all photos black and white */
+  width: 100%; /* Set width to 100% */
+  margin: auto;
+}
+
+.carousel-caption h3 {
+  color: #fff !important;
+}
+
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+  }
+}
+.jumbotron{
+ margin-top: 100px;
+ background-image: url(/img/banner3.jpg);
+ text-align: right;
+ color: white !important;
+}
+.myMenuSelection{
+font-family: 'Ribeye', cursive;
+margin: 0 80px;
+padding-left: 60px;
+
+}
+.myMenuSelection h1, h2{
+text-align: center;
+}
+.navbar {
+padding-top: 15px;
+padding-bottom: 15px;
+border: 0;
+border-radius: 0;
+margin-bottom: 0;
+letter-spacing: 5px;
+}
+.thumbnail a{
+margin: 5px;
+}
+
+
+
+
+
+

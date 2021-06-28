@@ -1,0 +1,20 @@
+extend layoutUser.pug
+    
+block content
+  div.container
+    h3 Your feedback is extremely important to us. Telling us about your experience, good or bad, means that we can better understand what is important to you, what we are doing well and where there are areas where we need to make improvements.
+    div.row
+        div.col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
+            div.panel.panel-default
+                div.panel-body
+                  form(action="")
+                  div.form-group
+                    input(type="text" id="fname" name="firstname" class="form-control" placeholder="Your name..")
+                  div.form-group
+                    input(type="text" id="lname" name="lastname" class="form-control" placeholder="Your last name..")
+                  div.form-group
+                    input(type="text" id="lname" name="lastname" class="form-control" placeholder="Subject")
+                  div.form-group
+                    textarea#subject(name="subject" class="form-control" placeholder="Write something.." style="height:200px")
+                  div.form-group
+                    button.btn.btn-primary.btn-sm(type="submit") Submit

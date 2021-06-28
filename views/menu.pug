@@ -1,0 +1,88 @@
+extend layoutUser.pug
+    
+block content
+   div.myMenuSelection
+    ul.nav.nav-pills.nav-justified
+      li.active
+        a(data-toggle='pill', href="#home") Breakfast
+      li  
+        a(data-toggle='pill', href="#menu1") Lunch And Dinner
+      li
+        a(data-toggle='pill', href="#menu2") Drinks and Dessert
+    div.tab-content
+        div#home.tab-pane.fade.in.active
+          h1 Short Order Menu
+          h2 Breakfast
+          h3 Add ons
+            p One Egg  1.00
+            p Hasbrown 2.00
+            p Bacon(2 slices) 2.00
+            p Ham(1 slice) 2.00
+            p Sausage(3 pieces) 2.00
+            p Order of Toast(2 slices of Rye, White, Whole wheat) 1.50
+            p Raisin Toast(2 slices) 2.00
+            p Peanut Butter and Jam .50
+          h3 Special and Omelette
+            p 
+              span DC CAFÉ Breakfast Special 6.00 
+              br
+              |             2 eggs, hashbrowns, choice of ham, bacon or 
+              |             sausage, order of toast with coffee
+            p
+            span Vegetable Omelette 4.00 
+            br
+            |               2 eggs, onion, mushrooms, peppers, tomatoes and cheese
+            p 
+              span DC Café Omelette 5.50 
+              br
+              |             2 eggs, onion, mushrooms, peppers and cheese 
+              |             with choice of meat (bacon, ham or sausage)
+            p Pancakes (2-4oz pancakes) 3.00
+          h3 SandWiches
+            p BLT Sandwich  5.00
+            p Denver Sandwich 5.00
+            p
+            span Breakfast Biscuit 6.00 2 
+            br
+            |               fried eggs, choice of ham, bacon or sausage, 
+            |               cheese with tomato on a tea biscuit 
+                
+        
+        div#menu1.tab-pane.fade
+          h1 Short Order Menu
+          h2 Lunch/Dinner
+          h3 Add ons
+            p add Cheese .50
+            p add Bacon 1.50
+            p add Ham 1.50
+            p add lettuce .50
+            p add Tomato .50
+            p add Dipping Sauce 1.00
+          h3 Main Dish
+            p Classic Hamburger 5.00
+            p Beef Burger 6.50
+            p Chicken Burger 6.00
+            p Hot Dog 4.00
+            p Chicken Fingers (4 pcs.) 5.00
+          h3 Wrap and Sandwiches
+            p Chicken Caesar Wrap 6.00
+            p Greek Chicken Wrap 6.00
+            p BLT Sandwich 5.00
+            p Clubhouse Sandwich 6.00
+            p Grilled Cheese Sandwich 4.00
+            p Deli Sandwich (Turkey, Beef and Ham) 4.00
+  
+        div#menu2.tab-pane.fade
+          h1 Short Order Menu
+          h2 Drinks and Dessert
+          h3
+            p Fountain Drink 1.00
+            p Bottle Pop 1.00
+            p Juice Machine 1.00
+            p Coffee or Tea 1.00
+            p Fresh Fruit (apple, banana, orange) 1.00 
+            p Fruit Plate with Cottage Cheese 5.00
+            p Cookies (2 2oz) 1.00
+            p Muffins 2.00 
+            p Cinnamon Bun 3.00
+            p Pie/Cake 2.00 

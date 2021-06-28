@@ -1,0 +1,10 @@
+extend ../layoutUser.pug 
+
+block content
+    div.container
+        h1.mt-4=`Welcome ${name}`
+        if(role === "Admin")
+            p.lead.mb-3
+            a.btn.btn-secondary(href="/admin/list") Admin
+        else
+            p I want to show purchase History

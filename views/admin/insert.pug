@@ -1,0 +1,22 @@
+extend ../layout.pug
+
+block content
+    div.container
+        div.row
+            form(action='/admin' method='POST' enctype="multipart/form-data")
+                fieldset
+                    legend Add Product
+                        div.form-group
+                            label Product Name
+                            input(type="text" class="form-control" name="name" placeholder="Product Name" required)
+                        div.form-group
+                            label Product Price
+                            input(type="number" class="form-control" name="price" placehoder="Product Price" required)
+                        div.form-group
+                            label Product Description
+                            textarea(name="description" class="form-control" placeholder="Product Description")
+                        div.form-group
+                            label Upload Product Photo
+                            input(type="file" name="image" id="image")
+                        div.form-group
+                            button.btn.btn-primary.btn-lg(type="submit") Add Product
