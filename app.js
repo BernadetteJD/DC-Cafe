@@ -53,7 +53,7 @@ app.use(
     secret: 'secret',
     resave: false,
     saveUninitialized: true,
-    store: MongoStore.create({mongoUrl: 'mongodb://localhost:27017/CafeDB'}), 
+    store: MongoStore.create({mongoUrl: db}), 
     cookie: { maxAge: 180*60*1000 } 
   }));
 // Passport Middleware
