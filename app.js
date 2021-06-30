@@ -25,7 +25,7 @@ var app = express();
 //passport config
 require('./config/passport')(passport);
 
-console.log(dotenv.parsed);
+//console.log(dotenv.parsed);
 
 const db = process.env.MONGODB_URI;
 

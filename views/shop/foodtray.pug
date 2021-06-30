@@ -16,9 +16,9 @@ block content
                                 span.caret
                             ul.dropdown-menu
                                 li
-                                a(href='/reduce/' + item._id) Reduce by 1
+                                 a(href="/shop/reduce/" + item.item._id) Reduce by 1
                                 li
-                                a(href='/reduce/' + item._id) Remove
+                                 a(href="/shop/remove/" + item.item._id) Remove
             div.col-sm-6.col-md-6.col-md-offset-3.col-sm-offset-3
                 strong=`Total Price ${totalPrice}`
         hr 
