@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+const { ensureAuthenticated } = require('../config/auth');
 
 /* GET home page. */
 router.get('/', (req, res) => {
@@ -16,6 +17,10 @@ router.get('/menu', (req, res) => {
 
 router.get('/feedback', (req, res) => {
   res.render('feedback', { title: 'FeedBack'});
+});
+
+router.get('/profile', ensureAuthenticated, (req, res) =>{
+  res.render('user/profile', {name: req.user.name , role: req.user.role});
 });
 
 

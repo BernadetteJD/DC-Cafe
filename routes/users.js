@@ -88,7 +88,7 @@ router.post('/signup',(req,res)=>{
 
 router.post('/login', (req, res, next) => {
   passport.authenticate('local', {
-    successRedirect: '/users/profile',
+    successRedirect: '/profile',
     failureRedirect: '/users/login',
     failureFlash: true
   })(req, res, next);
@@ -102,9 +102,9 @@ router.post('/login', (req, res, next) => {
 //     res.redirect('/users/' + req.user.username);
 //   });
 
-router.get('/profile', ensureAuthenticated, (req, res) =>{
-  res.render('user/profile', {name: req.user.name , role: req.user.role});
-});
+// router.get('/profile', ensureAuthenticated, (req, res) =>{
+//   res.render('user/profile', {name: req.user.name , role: req.user.role});
+// });
 
 router.get('/logout', (req, res) => {
   req.logout();
