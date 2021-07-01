@@ -4,7 +4,7 @@ html(lang='en')
     title #{title}
     link(rel="stylesheet" href="/css/style.css")
     link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css")
-    link(rel="stylesheet", href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css")
+    script(src="https://kit.fontawesome.com/32d7331a14.js", crossorigin="anonymous")
     
   body
     nav.navbar.navbar-inverse.navbar-fixed-top
@@ -64,15 +64,19 @@ html(lang='en')
                 h3 Follow us on:
                 ul.list-unstyled
                     li
-                     a(href="#")
-                       i.fa.fa-facebook-square(style='font-size:36px')
+                     a(href="#") 
+                       i.fab.fa-facebook(style='font-size:36px')
                     li
                      a(href="#") 
-                       i.fa.fa-instagram(style='font-size:36px')
+                       i.fab.fa-instagram(style='font-size:36px')
                     li
-                     a(href="#")
-                       i.fa.fa-twitter-square(style='font-size:36px')
-
+                     a(href="#") 
+                       i.fab.fa-twitter-square(style='font-size:36px')
+                h3 Feedback
+                ul.list-unstyled
+                    li
+                     a(href="/feedback") 
+                       i.fas.fa-comment-dots(style='font-size:36px')
 
 
         
