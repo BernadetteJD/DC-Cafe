@@ -11,6 +11,6 @@ block content
                         img.img-responsive(src="/uploads/images/" + item.image)
                         .caption
                         h4= item.name
-                        p= "Price :" + " " + item.price
+                        p= "Price :" + "$" + item.price
                         p=item.description
                         a.btn.btn-info(href="/shop/add-to-tray/" + item._id) Add to tray    
