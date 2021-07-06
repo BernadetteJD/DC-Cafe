@@ -6,6 +6,7 @@ const bcrypt = require('bcryptjs');
 const passport = require('passport');
 const { ensureAuthenticated } = require('../config/auth');
 const User = require('../models/userModel');
+const Feedback = require('../models/feedbackModel');
 
 /* GET users listing. */
 router.get('/login', (req, res) =>{
@@ -111,5 +112,30 @@ router.get('/logout', (req, res) => {
   req.flash('success_msg', 'You are logged out');
   res.redirect('/users/login');
 });
+
+router.get('/feedback', (req, res) => {
+  Feedback.find(function(err, docs){
+    res.render('user/feedback', { title: 'FeedBack', feedbacks: docs});
+  }); 
+});
+
+router.post('/feedback', (req,res)=>{
+  insertFeedback(req,res);
+});
+
+function insertFeedback(req,res){
+  var feedback = new Feedback();
+  feedback.firstname = req.body.firstname;
+  feedback.lastname = req.body.lastname;
+  feedback.subject = req.body.subject;
+  feedback.description = req.body.description;
+  feedback.save((err, doc) =>{
+      if(!err){
+          res.render('user/reply');
+      }else{
+          console.log('Error during feedback insertion: ' + err)
+      }
+  });
+}
 
 module.exports = router;

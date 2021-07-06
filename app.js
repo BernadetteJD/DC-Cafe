@@ -40,6 +40,7 @@ mongoose
 require('./models/productModel');
 require('./models/userModel');
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');

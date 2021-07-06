@@ -1,7 +1,6 @@
 const express = require('express');
 var router = express.Router();
 const mongoose = require('mongoose');
-//const Product = mongoose.model('Product');
 const Product = require('../models/productModel');
 const multer = require('multer');
 const { ensureAuthenticated } = require('../config/auth');
@@ -74,8 +73,6 @@ router.get('/update/:id', ensureAuthenticated, authRole("Admin"), (req, res) => 
         }
     });   
 });
-
-
 
 router.get('/delete/:id', ensureAuthenticated, authRole("Admin"), (req, res) => {
     Product.findByIdAndRemove(req.params.id, (err, doc) => {

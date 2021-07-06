@@ -36,7 +36,7 @@ router.get('/add-to-tray/:id', function(req, res){
 
   router.get('/reduce/:id', function(req, res, next) {
     var productId = req.params.id;
-    var cart = new Cart(req.session.cart ? req.session.cart : {});
+    var cart = new Cart(req.session.cart ? req.session.cart : {}); //if exist or not
 
     cart.reduceByOne(productId);
     req.session.cart = cart;
