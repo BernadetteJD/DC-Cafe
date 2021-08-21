@@ -37,6 +37,8 @@ Node_modules
 Multer
 https://code.tutsplus.com/tutorials/file-upload-with-multer-in-node--cms-32088
 
+Shopping cart tutorial 
+https://www.youtube.com/watch?v=-3vvxn78MH4
 
 
 
